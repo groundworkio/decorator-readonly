@@ -1,6 +1,6 @@
 {
   "name": "@ubricks/decorator-readonly",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A readonly decorator that prevents a class property (field or method) from being overridden.",
   "main": "lib/index.js",
   "scripts": {
