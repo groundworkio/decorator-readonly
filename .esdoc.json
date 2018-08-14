@@ -1,0 +1,73 @@
+{
+  "source": "./src",
+  "destination": "./docs",
+  "plugins": [
+    {
+      "name": "./strip-private.esdoc.js"
+    },
+    {
+      "name": "esdoc-standard-plugin",
+      "option": {
+        "brand": {
+          "title": "µBricks",
+          "description": "µBricks Readonly Decorator",
+          "repository": "https://github.com/ubricks/decorator-readonly",
+          "site": "http://my-library.org",
+          "author": "https://github.com/leonapegg",
+          "image": "http://my-library.org/logo.png"
+        },
+        "test": {
+          "source": "./tests/",
+          "interfaces": [
+            "expect",
+            "test",
+            "describe",
+            "it"
+          ],
+          "includes": [
+            "(spec|test)\\.js$"
+          ]
+        }
+      }
+    },
+    {
+      "name": "esdoc-integrate-manual-plugin",
+      "option": {
+        "globalIndex": true,
+        "files": [
+          "./man/install.md",
+          "./man/usage.md",
+          "./man/contributing.md",
+          "./man/faq.md",
+          "./CHANGELOG.md",
+          "./CONTRIBUTORS.md",
+          "./LICENSE.md"
+        ]
+      }
+    },
+    {
+      "name": "esdoc-ecmascript-proposal-plugin",
+      "option": {
+        "all": true
+      }
+    },
+    {
+      "name": "esdoc-flow-type-plugin",
+      "option": {
+        "enable": true
+      }
+    },
+    {
+      "name": "esdoc-importpath-plugin",
+      "option": {
+        "stripPackageName": false,
+        "replaces": [
+          {
+            "from": "^src/",
+            "to": "lib/"
+          }
+        ]
+      }
+    }
+  ]
+}
