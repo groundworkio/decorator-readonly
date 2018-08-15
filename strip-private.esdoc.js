@@ -2,7 +2,8 @@
 class StripPrivatePlugin {
   onHandleCode (ev) {
     // modify code
-    ev.data.code = ev.data.code.replace(new RegExp('#', 'g'), '')
+    ev.data.code = ev.data.code.replace(new RegExp(' #', 'g'), '')
+    ev.data.code = ev.data.code.replace(/\.#/g, '.')
   }
 }
 

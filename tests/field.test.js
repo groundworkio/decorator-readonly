@@ -8,7 +8,7 @@ class TestClass {
 
 /** @test {readonly} */
 describe('Decorate class fields', () => {
-  it('`TestClass field` should not be writeable', () => {
+  it('`TestClass#field` should not be writeable', () => {
     const testClass = new TestClass()
     try {
       testClass.field = 15
@@ -18,7 +18,7 @@ describe('Decorate class fields', () => {
       expect(testClass.field).toBe(10)
     }
   })
-  it('`TestClass staticField` should not be writeable', () => {
+  it('`TestClass.staticField` should not be writeable', () => {
     try {
       TestClass.staticField = 20
       throw new Error('Field should not be writeable')
